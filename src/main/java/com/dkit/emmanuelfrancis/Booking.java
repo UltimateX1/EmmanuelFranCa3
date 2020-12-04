@@ -1,6 +1,6 @@
 package com.dkit.emmanuelfrancis;
 
-public class ComputerBooking {
+public class Booking {
     public String bookingId;
     public String dateTime;
     public String returnDateTime;
@@ -8,7 +8,7 @@ public class ComputerBooking {
     public String compAssetTag;
     public String studentId;
 
-    public ComputerBooking(String bookingId, String dateTime, String returnDateTime, String computerType, String compAssetTag, String studentId) {
+    public Booking(String bookingId, String dateTime, String returnDateTime, String computerType, String compAssetTag, String studentId) {
         this.bookingId = bookingId;
         this.dateTime = dateTime;
         this.returnDateTime = returnDateTime;
