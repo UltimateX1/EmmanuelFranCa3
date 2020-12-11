@@ -4,16 +4,16 @@ public class Booking {
     public String bookingId;
     public String dateTime;
     public String returnDateTime;
-    public String computerType;
-    public String compAssetTag;
+    public String type;
+    public String assetTag;
     public String studentId;
 
-    public Booking(String bookingId, String dateTime, String returnDateTime, String computerType, String compAssetTag, String studentId) {
+    public Booking(String bookingId, String dateTime, String returnDateTime, String type, String assetTag, String studentId) {
         this.bookingId = bookingId;
         this.dateTime = dateTime;
         this.returnDateTime = returnDateTime;
-        this.computerType = computerType;
-        this.compAssetTag = compAssetTag;
+        this.type = type;
+        this.assetTag = assetTag;
         this.studentId = studentId;
     }
 
@@ -30,12 +30,12 @@ public class Booking {
         return returnDateTime;
     }
 
-    public String getComputerType() {
-        return computerType;
+    public String gettype() {
+        return type;
     }
 
-    public String getCompAssetTag() {
-        return compAssetTag;
+    public String getassetTag() {
+        return assetTag;
     }
 
     public String getStudentId() {
@@ -56,12 +56,12 @@ public class Booking {
         this.returnDateTime = returnDateTime;
     }
 
-    public void setComputerType(String computerType) {
-        this.computerType = computerType;
+    public void settype(String type) {
+        this.type = type;
     }
 
-    public void setCompAssetTag(String compAssetTag) {
-        this.compAssetTag = compAssetTag;
+    public void setassetTag(String assetTag) {
+        this.assetTag = assetTag;
     }
 
     public void setStudentId(String studentId) {
@@ -76,8 +76,8 @@ public class Booking {
                 "bookingId='" + bookingId + '\'' +
                 ", dateTime='" + dateTime + '\'' +
                 ", returnDateTime='" + returnDateTime + '\'' +
-                ", computerType='" + computerType + '\'' +
-                ", compAssetTag='" + compAssetTag + '\'' +
+                ", type='" + type + '\'' +
+                ", assetTag='" + assetTag + '\'' +
                 ", studentId='" + studentId + '\'' +
                 '}';
     }

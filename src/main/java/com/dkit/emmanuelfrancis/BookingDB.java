@@ -10,33 +10,31 @@ public class BookingDB {
     private ArrayList<Booking> bookings;
     private static Scanner keyboard = new Scanner(System.in);
 
-    public BookingDB()
-    {
+    public BookingDB() {
         this.bookings = new ArrayList<>();
     }
 
-    protected void loadPlayerFromFile()
-    {
-        try(Scanner playersFile = new Scanner(new BufferedReader
-                (new FileReader("players.txt"))))
-        {
+    protected void loadBookingFromFile() {
+        try (Scanner bookingFile = new Scanner(new BufferedReader
+                (new FileReader("bookings.txt")))) {
             String input;
-            while(playersFile.hasNextLine())
-            {
-                input = playersFile.nextLine();
+            while (bookingFile.hasNextLine()) {
+                input = bookingFile.nextLine();
                 String[] data = input.split(",");
-                String name = data[0];
-                int hitPoints = Integer.parseInt(data[1]);
-                int strength = Integer.parseInt(data[2]);
-                String weapon = data[3];
+                String bookingId = data[0];
+                String dateTime = data[1];
+                String returnDateTime = data[2];
+                String type = data[3];
+                String assetTag = data[4];
+                String studentId = data[5];
 
-                Booking readInPlayer = new Booking(name, hitPoints, strength, weapon);
-                this.players.add(readInPlayer);
+
+                Booking readInBooking = new Booking(bookingId, dateTime, returnDateTime, type, assetTag, studentId);
+                this.bookings.add(readInBooking);
             }
+        } catch (FileNotFoundException fne) {
+            System.out.println(Colours.BLUE + "Could not load bookings. If this is " +
+                    "the first time running the program this could be fine" + Colours.RESET);
         }
-        catch(FileNotFoundException fne)
-        {
-            System.out.println(Colours.BLUE + "Could not load players. If this is " +
-                    "the first time running the program this could be fine" + Colours.RESET );
-        }
+    }
 }

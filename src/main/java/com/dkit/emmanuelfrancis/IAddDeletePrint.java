@@ -1,6 +1,6 @@
 package com.dkit.emmanuelfrancis;
 
-public interface AddDeletePrint {
+public interface IAddDeletePrint {
     void addData();
     void deleteData();
     void printData();
